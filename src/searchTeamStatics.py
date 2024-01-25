@@ -30,7 +30,7 @@ class SearchTeamStatics:
         self.base_api = 'https://api.sofascore.com/api/v1/team/'
         self.end_api = '/statistics/overall'
 
-    def choose_team(self, time):
+    def choose_team(self, time:str):
         self.data_list = []
         self.count_url_list = 0
         self.count_data_list = 0
@@ -63,3 +63,16 @@ class SearchTeamStatics:
             self.count_url_list +=1
         
         return self.data_list
+    
+    def build_dataframe(self, time:str):
+        team = self.choose_team(time.lower())
+        team_df = pd.DataFrame(index=team[2].keys())
+
+        for i in range(len(team)):
+            if len(team_df.index) != len(team[i]):
+                raise ValueError(f"O comprimento do índice não corresponde ao número de valores para o ano {team[i]['ano']}")
+
+            team_df[str(team[i]['ano'])] = team[i].values()
+
+        team_df['Média'] = team_df.mean(axis=1).apply(lambda x: float("{:.1f}".format(x)))
+        return team_df

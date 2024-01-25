@@ -14,7 +14,7 @@ def init(msg):
 
 
 
-        if message == "oi":
+        if message.lower() == "oi":
             bot.sendMessage(chat_id, 'Olá sou um chatbot que busca estatísticas de times de futebol da Serie A do Brasileirão de 2023. \n\n1- Ver todos os times.')
 
         if message == '1':
@@ -25,83 +25,83 @@ def init(msg):
             
             bot.sendMessage(chat_id, '\n\n2- Selecione o seu time e verifique as estatísticas: ')
 
-        if message == 'palmeiras':
+        if message.lower() == 'palmeiras':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'gremio':
+        elif message.lower() == 'gremio':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'atletico-mineiro':
+        elif message.lower() == 'atletico-mineiro':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'flamengo':
+        elif message.lower() == 'flamengo':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'botafogo':
+        elif message.lower() == 'botafogo':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'red-bull-bragantino':
+        elif message.lower() == 'red-bull-bragantino':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'fluminense':
+        elif message.lower() == 'fluminense':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'athletico':
+        elif message.lower() == 'athletico':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'internacional':
+        elif message.lower() == 'internacional':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'fortaleza':
+        elif message.lower() == 'fortaleza':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'sao-paulo':
+        elif message.lower() == 'sao-paulo':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'cuiaba':
+        elif message.lower() == 'cuiaba':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'corinthians':
+        elif message.lower() == 'corinthians':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'cruzeiro':
+        elif message.lower() == 'cruzeiro':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'vasco':
+        elif message.lower() == 'vasco':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'bahia':
+        elif message.lower() == 'bahia':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'santos':
+        elif message.lower() == 'santos':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'goias':
+        elif message.lower() == 'goias':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'coritiba':
+        elif message.lower() == 'coritiba':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
-        elif message == 'america-mineiro':
+        elif message.lower() == 'america-mineiro':
             statics = time_statics.choose_team(message)
             bot.sendMessage(chat_id, f'Estatísticas do {message}: TESTE')
 
