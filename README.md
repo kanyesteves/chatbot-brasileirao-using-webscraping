@@ -14,3 +14,10 @@ Foi implementado o chatbot para automatizar a busca pelas estatísticas de cada 
 - pandas
 - requests
 - telepot
+
+## Colunas para apresentação do dataframe
+
+1. matches - Partidas.
+2. goalsScored - Gols marcados.
+3. goalsConceded - Gols sofridos.
+4. Assists - Assistências.

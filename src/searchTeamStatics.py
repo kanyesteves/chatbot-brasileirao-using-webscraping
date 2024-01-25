@@ -39,14 +39,12 @@ class SearchTeamStatics:
         id_time = self.teams_address_A[time.lower()][-4:]
         endpoint_21 = '36166'
         endpoint_22 = '40557'
-        endpoint_23 = '48982'
         middle_api = f'/unique-tournament/{serie}/season/'
 
         url_21 = self.base_api + id_time + middle_api + endpoint_21 + self.end_api 
         url_22 = self.base_api + id_time + middle_api + endpoint_22 + self.end_api 
-        url_23 = self.base_api + id_time + middle_api + endpoint_23 + self.end_api
 
-        url_list = [url_21, url_22, url_23]
+        url_list = [url_21, url_22]
         for url in url_list:
             api_link = requests.get(url, headers=self.browsers).json()
             if not 'error' in api_link:
@@ -66,12 +64,9 @@ class SearchTeamStatics:
     
     def build_dataframe(self, time:str):
         team = self.choose_team(time.lower())
-        team_df = pd.DataFrame(index=team[2].keys())
+        team_df = pd.DataFrame(index=team[0].keys())
 
         for i in range(len(team)):
-            if len(team_df.index) != len(team[i]):
-                raise ValueError(f"O comprimento do índice não corresponde ao número de valores para o ano {team[i]['ano']}")
-
             team_df[str(team[i]['ano'])] = team[i].values()
 
         team_df['Média'] = team_df.mean(axis=1).apply(lambda x: float("{:.1f}".format(x)))
