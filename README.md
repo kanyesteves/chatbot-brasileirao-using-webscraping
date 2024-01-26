@@ -1,10 +1,13 @@
-# Web Scraping com ChatBot
+# Web Scraping com dashboard e chatboot
 
 Esse projeto fiz com base no curso de `Web Scraping – Extraindo dados da web` da **Asimov Academy**.
 
 ## Objetivo
 
 Buscar estatísticas de cada time da Seria A do Brasileirão.
+
+## Dashboard
+link do webapp: https://app-brasileirao.streamlit.app/
 
 ## Implemenação 
 
@@ -14,6 +17,7 @@ Foi implementado o chatbot para automatizar a busca pelas estatísticas de cada 
 - pandas
 - requests
 - telepot
+- streamlit
 
 ## Colunas para apresentação do dataframe
 
