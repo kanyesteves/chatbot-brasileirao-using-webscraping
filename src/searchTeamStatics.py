@@ -37,24 +37,18 @@ class SearchTeamStatics:
 
         serie = '325'
         id_time = self.teams_address_A[time.lower()][-4:]
-        endpoint_21 = '36166'
-        endpoint_22 = '40557'
+        endpoint_23 = '48982'
         middle_api = f'/unique-tournament/{serie}/season/'
 
-        url_21 = self.base_api + id_time + middle_api + endpoint_21 + self.end_api 
-        url_22 = self.base_api + id_time + middle_api + endpoint_22 + self.end_api 
+        url_23 = self.base_api + id_time + middle_api + endpoint_23 + self.end_api
 
-        url_list = [url_21, url_22]
+        url_list = [url_23]
         for url in url_list:
             api_link = requests.get(url, headers=self.browsers).json()
             if not 'error' in api_link:
                 self.data_list.append(api_link['statistics'])
 
                 if url_list.index(url_list[self.count_url_list]) == 0:
-                    self.data_list[self.count_data_list]['ano'] = 2021
-                elif url_list.index(url_list[self.count_url_list]) == 1:
-                    self.data_list[self.count_data_list]['ano'] = 2022
-                elif url_list.index(url_list[self.count_url_list]) == 2:
                     self.data_list[self.count_data_list]['ano'] = 2023
 
                 self.count_data_list +=1
@@ -69,5 +63,4 @@ class SearchTeamStatics:
         for i in range(len(team)):
             team_df[str(team[i]['ano'])] = team[i].values()
 
-        team_df['Média'] = team_df.mean(axis=1).apply(lambda x: float("{:.1f}".format(x)))
         return team_df
