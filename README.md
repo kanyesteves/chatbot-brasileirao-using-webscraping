@@ -11,8 +11,11 @@ link do webapp: https://app-brasileirao.streamlit.app/
 
 ## Implemenação 
 
-Foi implementado o chatbot para automatizar a busca pelas estatísticas de cada time.
+Esse projeto foi feito seguindo os conhecimentos obtidos nos projetos anteriores de web-scraping, mas de uma forma diferente de extrair os dados do site.
+Em um projeto padrao de web-scraping você consegue entender como e feita a "raspagem" dos dados do site com a biblioteca beautifulsoup para tratar o html.
+Mas como esse site ele e dinâmico e nao estático vamos usar a API que ele fornece para buscar esses dados la do proprio banco de dados do site.
 
+**Url para a API:** https://api.sofascore.com/api/v1/team/
 ## Bibliotecas
 - pandas
 - requests
